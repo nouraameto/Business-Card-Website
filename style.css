@@ -1,0 +1,325 @@
+:root {
+  /* PRIMARY COLORS */
+  --primary-dark-blue: #003366;
+  --primary-teal: #00A8A8;
+  
+  /* BACKGROUND COLORS */
+  --bg-light-gray: #F5F5F5;
+  --bg-white: #FFFFFF;
+  
+  /* TEXT COLORS */
+  --text-dark: #333333;
+  --text-gray: #666666;
+  --text-light-gray: #999999;
+  
+  /* SKILL BADGE COLORS */
+  --skill-dark-blue: #003D7A;
+  --skill-light-gray: #E8E8E8;
+  
+  /* BORDER COLORS */
+  --border-light: #DDDDDD;
+  --border-medium: #CCCCCC;
+  
+  /* SHADOW */
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.15);
+  /* Font Famliy */
+  --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+--font-heading: 'Arial', sans-serif;
+
+
+}
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    font-family: var(--font-heading); 
+    background-color: var(--bg-light-gray);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+header {
+    margin-left: 30px;
+    padding: 10px 30px;
+    position: relative;
+}
+
+header::after {
+    position: absolute;
+    content: "";
+    width: 90%;
+    height: 1px;
+    left: 0;
+    bottom: 17px;
+    background-color: var(--border-medium);
+}
+header nav ul {
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+}
+header nav ul li {
+    margin: 0 30px;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: var(--text-gray);
+}
+.active {
+    color: var(--primary-dark-blue);
+    font-weight: bold;
+    position: relative;
+}
+header nav ul li a:hover {
+    color: var(--primary-teal);
+}
+.active::after {
+    position: absolute;
+    content: "";
+    width: 55px;
+    height: 2px;
+    left: -7px;
+    bottom: -9px;
+    background-color: var(--primary-dark-blue);
+}
+@media  (max-width: 767px) {
+    header {
+        margin-left: 0;
+        padding: 5px;
+    }
+    header::after {
+       bottom: 23px;  
+    }
+    header nav ul  {
+        justify-content: center;
+    }
+    header nav ul li {
+        margin: 10px;
+    }
+    li a {
+        font-size: 12px;
+    }
+    .active::after {
+        width: 40px;
+        left: -5px;
+    }
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 80%; */
+    margin-top: 70px; 
+    gap: 40px;
+    position: relative;
+}
+main::after {
+    position: absolute;
+    content: "";
+    width: 90%;
+    height: 1px;
+    left: 20px;
+    bottom: -7px;
+    background-color: var(--border-medium);
+}
+main .profile-img img {
+    width: 200px;
+}
+.about-me {
+    position: relative;
+}
+.about-me::after {
+     position: absolute;
+    content: "";
+    width: 95%;
+    height: 1px;
+    left: 0;
+    bottom: 63px;
+    background-color: var(--border-medium);
+}
+.about-me h1 {
+    text-align: center;
+    color: var(--primary-dark-blue);
+    font-family: var(--font-heading);
+    margin: 10px auto;
+}
+.about-me h2 {
+    color: var(--primary-teal);
+    font-size: 18px;
+    margin: 0 auto;
+}
+.about-me p, span {
+    color: var(--text-dark);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.about-me span {
+    font-size: 16px;
+    color: var(--text-light-gray);
+}
+@media  (max-width: 767px) {
+  main {
+    width: 100%;
+    flex-direction: column;
+  }
+  main .profile-img img {
+    width: 100px;
+  }
+}
+.section {
+    margin-top: 50px;
+}
+.section .Skills{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.Skills ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: #fff;
+}
+.Skills ul li {
+    text-align: center;
+}
+.skill-one,
+.skill-two,
+.skill-four,
+.skill-five,
+.skill-seven {
+     background-color: var(--primary-dark-blue);
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+.skill-three,
+.skill-six {
+     padding: 5px 30px;
+    border-radius: 5px;
+    background-color: var(--border-light);
+    color: var(--text-dark);
+}
+.boxes {
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.boxes .box {
+    background-color: var(--bg-white);
+    padding: 10px 10px;
+    border-radius: 6px;
+}
+section .box img {
+    max-width: 100%;
+    border-radius: 3px;
+}
+.box-info {
+    position: relative;
+}
+.box-info h4 {
+    color: var(--text-dark);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 5px auto;
+}
+.box-info p {
+    margin: 10px auto;
+    font-size: 12px;
+    font-family: var(--font-primary);
+}
+.box-info .button {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+button {
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button[type= "button"] {
+    padding: 5px 10px;
+    color: var(--text-dark);
+    border: 1px solid var(--border-light);
+    background-color: var(--bg-white);
+}
+@media  (max-width: 767px) {
+    .Skills ul {
+        justify-content: center;
+        gap: 10px;
+    }
+}
+footer {
+    margin-top: 90px;
+    margin-bottom: 50px;
+    position: relative;
+    text-align: center;
+}
+ h5, h3 {
+    text-align: center;
+    color: var(--text-dark);
+    font-size: 18px;
+    font-family:'Courier New', Courier, monospace;
+}
+.Contact-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.social-media::after {
+    position: absolute;
+    content: "";
+    width: 95%;
+    height: 1px;
+    left: 0;
+    bottom: 5px;
+    background-color: var(--border-medium);
+}
+.social-media img {
+    width: 30px;
+}
+.Contact-me p {
+    font-size: 15px;
+}
+.copyright {
+    color: var(--text-light-gray);
+    margin: 15px auto;
+}
+.contact-info {
+    position: relative;
+}
+.contact-info::after {
+    position: absolute;
+    content: "";
+    width: 261px;
+    height: 1px;
+    left: -14px;
+    bottom: 5px;
+    background-color: var(--border-medium);
+}
+@media  (max-width: 767px) {
+    .social-media img {
+        width: 20px; 
+    }
+    .Contact-me p {
+        font-size: 12px;
+        font-family: var(--font-primary);
+    }
+    .contact-info::after {
+        left: -40px;
+    }
+}
